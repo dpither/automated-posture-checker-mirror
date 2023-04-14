@@ -1,0 +1,2 @@
+GPIO_26 = START/STOP pin ---> GPIO_0[6] ----> bit 0
+GPIO_27 = TEST image pin ---> GPIO_0[7] ----> bit 1

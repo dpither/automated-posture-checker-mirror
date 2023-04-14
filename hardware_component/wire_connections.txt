@@ -1,0 +1,12 @@
+WIRE CONNECTIONS:
+
+
+DE1-SoC ---- ESP32
+
+GPIO_0[6] ---- GPIO_26
+
+GPIO_0[4] ----- GPIO_12
+
+VCC_5 ----- 5V
+
+GND ----- GND

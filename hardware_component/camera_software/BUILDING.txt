@@ -1,0 +1,10 @@
+TO build on your own computer:
+
+Use the cross compiler located in this repository to build it, command should be as follows:
+
+arm-linux-gnueabihf-gcc -o camera_system camera_system.c libjpeg.a -g -std=c99
+
+or on the De1-SoC just do:
+gcc -o camera_system camera_system.c libstatic.a -g -std=c99
+
+Also for autoboot on startup, run the following: /home/root/camera_software/camera_system
