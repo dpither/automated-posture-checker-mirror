@@ -1,0 +1,65 @@
+<resources>
+    <!--    <string name="app_name">Automated Posture Checker</string>-->
+    <string name="app_name">APC</string>
+    <string name="base_url">http://18.118.255.2:3000/</string>
+    <string name="sign_in_url">user</string>
+    <string name="sign_up_url">user/create</string>
+    <string name="sessions_url">sessions/</string>
+    <string name="image_url">image/latest</string>
+    <string name="status_url">status</string>
+    <string name="service_UUID_string">000000ff-0000-1000-8000-00805f9b34fb</string>
+    <string name="characteristic_UUID_string">0000ff01-0000-1000-8000-00805f9b34fb</string>
+    <string name="START_OPCODE">01</string>
+    <string name="STOP_OPCODE">02</string>
+    <string name="TEST_OPCODE">03</string>
+    <string name="CONFIG_OPCODE">04</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="your_sessions">Your Sessions</string>
+    <string name="session_name">Session Name</string>
+    <string name="create_session">Create Session</string>
+    <string name="notification_type">Notification Type</string>
+    <string name="select_vibration">Vibration</string>
+    <string name="select_sound">Sound</string>
+    <string name="select_mute">Mute</string>
+    <string name="bad_posture_threshold">Bad Posture Threshold</string>
+    <string name="stretch_reminder_units">minutes</string>
+    <string name="bad_posture_threshold_units">images</string>
+    <string name="begin_setup">Begin Setup</string>
+    <string name="setup_session">Setup Session</string>
+    <string name="close">Close</string>
+    <string name="connect_to_device">Connect to Device</string>
+    <string name="scan">Scan for Device</string>
+    <string name="default_status">Waiting for scan</string>
+    <string name="check_position">Check Position</string>
+    <string name="start">Start</string>
+    <string name="position_camera">Position Camera</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="session_summary">Session Summary</string>
+    <string name="stretch_reminder">Stretch Reminder</string>
+    <string name="session_date_title">Date</string>
+    <string name="session_duration_title">Total Duration</string>
+    <string name="session_sitting_title">Sitting Time</string>
+
+    <string name="default_stretch_reminder">1</string>
+    <string name="default_bad_posture_threshold">1</string>
+
+    <string name="test_username"></string>
+    <string name="test_password"></string>
+    <string name="test_session_name">CPEN 391 Demo</string>
+
+    <string name="timer_placeholder">00:00:00</string>
+    <string name="session_name_placeholder">Test Session</string>
+    <string name="session_time_placeholder">12h 30m</string>
+    <string name="session_percentage_placeholder">99%</string>
+    <string name="session_date_placeholder">12/24/2023</string>
+    <string name="session_posture_title">Good Posture</string>
+    <string name="password_placeholder">jz12345678</string>
+<!--    <string name="password_placeholder">57055954</string>-->
+
+</resources>

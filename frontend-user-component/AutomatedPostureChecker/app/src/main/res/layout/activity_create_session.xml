@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CreateSession">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:guidelineUseRtl="false"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bot_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp" />
+
+    <TextView
+        android:id="@+id/create_session"
+        style="@style/Title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_session"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toTopOf="@+id/top_guide" />
+
+    <ImageButton
+        android:id="@+id/cancel_create_session_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/create_session"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintTop_toTopOf="@+id/create_session"
+        app:srcCompat="@drawable/ic_close" />
+
+    <View
+        android:id="@+id/create_session_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/app_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_session" />
+
+    <TextView
+        android:id="@+id/name_text"
+        style="@style/Info_text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/session_name"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/create_session_divider" />
+
+    <EditText
+        android:id="@+id/session_name_input"
+        style="@style/Input_text"
+        android:layout_width="0dp"
+        android:hint="@string/session_name"
+        android:text="@string/test_session_name"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+    <TextView
+        android:id="@+id/notification_type"
+        style="@style/Info_text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/notification_type"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/session_name_input" />
+
+    <RadioGroup
+        android:id="@+id/notification_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/notification_type">
+
+        <RadioButton
+            android:id="@+id/select_sound"
+            style="@style/Radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/select_sound" />
+
+        <RadioButton
+            android:id="@+id/select_vibration"
+            style="@style/Radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_vibration"
+            android:textColorHighlight="#FF0000" />
+
+        <RadioButton
+            android:id="@+id/select_mute"
+            style="@style/Radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_mute" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/stretch_reminder"
+        style="@style/Info_text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/stretch_reminder"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/notification_group" />
+
+    <EditText
+        android:id="@+id/stretch_reminder_input"
+        style="@style/Input_text"
+        android:layout_width="wrap_content"
+        android:width="25dp"
+        android:ems="10"
+        android:gravity="bottom|right"
+        android:inputType="number"
+        android:text="@string/default_stretch_reminder"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/stretch_reminder" />
+
+    <TextView
+        android:id="@+id/stretch_reminder_units"
+        style="@style/Input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="@string/stretch_reminder_units"
+        app:layout_constraintStart_toEndOf="@+id/stretch_reminder_input"
+        app:layout_constraintTop_toBottomOf="@+id/stretch_reminder" />
+
+    <TextView
+        android:id="@+id/bad_posture_threshold"
+        style="@style/Info_text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/bad_posture_threshold"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/stretch_reminder_input" />
+
+    <EditText
+        android:id="@+id/bad_posture_threshold_input"
+        style="@style/Input_text"
+        android:layout_width="wrap_content"
+        android:width="25dp"
+        android:ems="10"
+        android:gravity="bottom|right"
+        android:inputType="number"
+        android:text="@string/default_bad_posture_threshold"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/bad_posture_threshold" />
+
+    <TextView
+        android:id="@+id/bad_posture_threshold_units"
+        style="@style/Input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="@string/bad_posture_threshold_units"
+        app:layout_constraintStart_toEndOf="@+id/bad_posture_threshold_input"
+        app:layout_constraintTop_toBottomOf="@+id/bad_posture_threshold" />
+
+    <Button
+        android:id="@+id/begin_setup_btn"
+        style="@style/Button"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/begin_setup"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/bad_posture_threshold_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

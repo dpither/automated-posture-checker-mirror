@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignUp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:guidelineUseRtl="false"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <TextView
+        android:id="@+id/sign_up"
+        style="@style/Title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:text="@string/sign_up"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cancel_sign_up_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintTop_toTopOf="@+id/sign_up"
+        app:srcCompat="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/username"
+        style="@style/Info_text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/username"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up" />
+
+    <EditText
+        android:id="@+id/username_input"
+        style="@style/Input_text"
+        android:layout_width="0dp"
+        android:hint="@string/username"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <TextView
+        android:id="@+id/password"
+        style="@style/Info_text_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/password"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/username_input" />
+
+    <EditText
+        android:id="@+id/password_input"
+        style="@style/Input_text"
+        android:layout_width="0dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/create_account_btn"
+        style="@style/Button"
+        android:layout_marginTop="10dp"
+        android:text="@string/create_account"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/apc_icon_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

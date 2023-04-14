@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SessionInfo">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:guidelineUseRtl="false"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bot_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp" />
+
+    <TextView
+        android:id="@+id/session_summary"
+        style="@style/Title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/session_summary"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toTopOf="@+id/top_guide" />
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/session_summary"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintTop_toTopOf="@+id/session_summary"
+        app:srcCompat="@drawable/ic_back" />
+
+    <View
+        android:id="@+id/session_info_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/app_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/session_summary" />
+
+    <ScrollView
+        android:id="@+id/session_stats"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_guide"
+        app:layout_constraintStart_toStartOf="@+id/right_guide"
+        app:layout_constraintTop_toBottomOf="@+id/session_info_divider"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_title"
+                style="@style/Info_text_blue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="@string/session_name" />
+
+            <TextView
+                android:id="@+id/name_text"
+                style="@style/Info_text_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/session_name_placeholder" />
+
+            <TextView
+                android:id="@+id/time_title"
+                style="@style/Info_text_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/session_date_title" />
+
+            <TextView
+                android:id="@+id/date_text"
+                style="@style/Info_text_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/session_date_placeholder" />
+
+            <TextView
+                android:id="@+id/duration_title"
+                style="@style/Info_text_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/session_duration_title" />
+
+            <TextView
+                android:id="@+id/duration_text"
+                style="@style/Info_text_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/session_time_placeholder" />
+
+            <TextView
+                android:id="@+id/sitting_title"
+                style="@style/Info_text_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/session_sitting_title" />
+
+            <TextView
+                android:id="@+id/sitting_text"
+                style="@style/Info_text_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/session_percentage_placeholder" />
+
+            <TextView
+                android:id="@+id/posture_title"
+                style="@style/Info_text_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/session_posture_title" />
+
+            <TextView
+                android:id="@+id/posture_text"
+                style="@style/Info_text_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/session_percentage_placeholder" />
+
+            <Button
+                android:id="@+id/delete_btn"
+                style="@style/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/app_red"
+                android:text="Delete" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
