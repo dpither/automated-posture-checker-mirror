@@ -1,32 +1,32 @@
 # ML model
 
-pip install -q imageio
-pip install -q opencv-python
-pip install -q git+https://github.com/tensorflow/docs
-pip install -q tensorflow
-pip install -q tensorflow_hub
-pip install -q ipython
-pip install numpy
-pip install matplotlib
-pip install tensorflow_addons
+pip install -q imageio<br />
+pip install -q opencv-python<br />
+pip install -q git+https://github.com/tensorflow/docs<br />
+pip install -q tensorflow<br />
+pip install -q tensorflow_hub<br />
+pip install -q ipython<br />
+pip install numpy<br />
+pip install matplotlib<br />
+pip install tensorflow_addons<br />
 
-File included: 
-angles.py
-poseDetection.py
-postureModel.py
-runAll.py
-server.py
-sitModel.py
+File included: <br />
+angles.py<br />
+poseDetection.py<br />
+postureModel.py<br />
+runAll.py<br />
+server.py<br />
+sitModel.py<br />
 
-This is for training only
-sitModelTrain.py
+This is for training only<br />
+sitModelTrain.py<br />
 
 This contains the data for training. We did not upload the image data to github.
 These are mainly images from google image search. You can find them here: 
-https://drive.google.com/drive/folders/1Z5uSlPW8puxnCU6FzVI2c8rF-MysFOII?usp=share_link
+https://drive.google.com/drive/folders/1Z5uSlPW8puxnCU6FzVI2c8rF-MysFOII?usp=share_link<br />
 /data
 
-Some small test files
-testAngles.py
-testPoseDetection.py
-testPostureModel.py
+Some small test files<br />
+testAngles.py<br />
+testPoseDetection.py<br />
+testPostureModel.py<br />
